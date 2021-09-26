@@ -15,7 +15,7 @@
 
 Status InitList_L(LinkList *L)
 {
-	(*L) = (LinkList)malloc(sizeof(LNode));
+	(*L) = (LinkList)malloc(sizeof(LNode)); //获取Node的字段长度，然后强转为Linklist类型。L变量就代表地址长度和Node一样所占内存空间同样大小的Linklist
 	if(!(*L))
 		exit(OVERFLOW);
 	(*L)->next = NULL;
